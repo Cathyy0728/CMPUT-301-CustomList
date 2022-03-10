@@ -20,4 +20,32 @@ public class CutomListTest {
         list.addCity(new City("Halifax","NS"));
         assertEquals(listSize+1,list.getCount());
     }
+
+    /**
+     * 下面我加的
+     */
+    @Test
+    public void testHasCity() {
+        int listSize = list.getCount();
+        list.hasCity(new City("Charlottetown", "PEI"));
+        assertEquals(listSize + 1, list.getCount());
+        list.hasCity(new City("Mississauga", "On"));
+        assertEquals(listSize + 1, list.getCount());
+    }
+    @Test
+    public void testDeleteCity(){
+        int listSize = list.getCount();
+        list.addCity(new City("Mississauga", "On"));
+        list.deleteCity(new City("Mississauga", "On"));
+        assertEquals(listSize+1-1, list.getCount());;
+    }
+    @Test
+    public void testCount(){
+        assertEquals(0,list.countCities());
+        list.addCity(new City("Mississauga","On"));
+        assertEquals(1,list.countCities());
+    }
+
+
 }
+
