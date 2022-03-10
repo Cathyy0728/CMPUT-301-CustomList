@@ -43,7 +43,7 @@ public class CutomListTest {
     }
     @Test
     public void testCount(){
-        assertEquals(1,list.countCities());
+        assertEquals(0,list.countCities());
         list.addCity(new City("Mississauga","On"));
         assertEquals(1,list.countCities());
     }
