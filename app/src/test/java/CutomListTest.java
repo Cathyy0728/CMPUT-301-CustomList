@@ -27,7 +27,7 @@ public class CutomListTest {
     @Test
     public void testHasCity() {
         boolean b1= list.hasCity(new City("Charlottetown", "PEI"));
-        assertEquals(true, b1);
+        assertEquals(false, b1);
         City city = new City("Mississauga", "On");
         list.addCity(city);
         boolean b2 = list.hasCity(city);
@@ -43,7 +43,7 @@ public class CutomListTest {
     }
     @Test
     public void testCount(){
-        assertEquals(0,list.countCities());
+        assertEquals(1,list.countCities());
         list.addCity(new City("Mississauga","On"));
         assertEquals(1,list.countCities());
     }
