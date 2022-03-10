@@ -26,17 +26,19 @@ public class CutomListTest {
      */
     @Test
     public void testHasCity() {
-        int listSize = list.getCount();
-        list.hasCity(new City("Charlottetown", "PEI"));
-        assertEquals(listSize + 1, list.getCount());
-        list.hasCity(new City("Mississauga", "On"));
-        assertEquals(listSize + 1, list.getCount());
+        boolean b1= list.hasCity(new City("Charlottetown", "PEI"));
+        assertEquals(true, b1);
+        City city = new City("Mississauga", "On");
+        list.addCity(city);
+        boolean b2 = list.hasCity(city);
+        assertEquals(true,b2);
     }
     @Test
     public void testDeleteCity(){
         int listSize = list.getCount();
-        list.addCity(new City("Mississauga", "On"));
-        list.deleteCity(new City("Mississauga", "On"));
+        City city = new City("Mississauga", "On");
+        list.addCity(city);
+        list.deleteCity(city);
         assertEquals(listSize+1-1, list.getCount());;
     }
     @Test
