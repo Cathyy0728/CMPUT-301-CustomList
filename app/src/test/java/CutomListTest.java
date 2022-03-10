@@ -39,7 +39,7 @@ public class CutomListTest {
         City city = new City("Mississauga", "On");
         list.addCity(city);
         list.deleteCity(city);
-        assertEquals(listSize+1-1, list.getCount());;
+        assertEquals(listSize+1, list.getCount());;
     }
     @Test
     public void testCount(){
